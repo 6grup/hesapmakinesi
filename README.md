@@ -1,5 +1,9 @@
 # hesapmakinesi
 
+# Emeği geçenler
+
+# Nuri Kan---Selim Görgeç---Rojhat Gökçe---Zeynel---Devran---Canbey---Talha
+
 A new Flutter project.
 
 ## Getting Started
