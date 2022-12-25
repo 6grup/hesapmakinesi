@@ -1,5 +1,6 @@
 // ignore_for_file: unnecessary_new, prefer_const_constructors, sort_child_properties_last, non_constant_identifier_names, use_key_in_widget_constructors
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -65,6 +66,7 @@ class HomePageState extends State<HomePage> {
     setState(() {
       t1.text = "";
       t2.text = "";
+      sonuc = 0;
     });
   }
 
