@@ -1,6 +1,5 @@
 // ignore_for_file: unnecessary_new, prefer_const_constructors, sort_child_properties_last, non_constant_identifier_names, use_key_in_widget_constructors
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -26,6 +25,7 @@ ThemeData _darkTheme = ThemeData(
 
 class HomePageState extends State<HomePage> {
   var sayi1 = 0, sayi2 = 0, sonuc = 0;
+  double dsayi1 = 0, dsayi2 = 0, dsonuc = 0;
 
   final TextEditingController t1 = new TextEditingController();
   final TextEditingController t2 = new TextEditingController();
@@ -56,9 +56,9 @@ class HomePageState extends State<HomePage> {
 
   void Bol() {
     setState(() {
-      sayi1 = int.parse(t1.text);
-      sayi2 = int.parse(t2.text);
-      sonuc = sayi1 ~/ sayi2;
+      dsayi1 = double.parse(t1.text);
+      dsayi2 = double.parse(t2.text);
+      dsonuc = dsayi1 / dsayi2;
     });
   }
 
@@ -67,6 +67,7 @@ class HomePageState extends State<HomePage> {
       t1.text = "";
       t2.text = "";
       sonuc = 0;
+      dsonuc = 0;
     });
   }
 
@@ -95,7 +96,15 @@ class HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               new Text(
-                "Sonuç : $sonuc",
+                "Sonuç1 : $dsonuc",
+                style: new TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.red,
+                ),
+              ),
+              new Text(
+                "Sonuç2 : $sonuc",
                 style: new TextStyle(
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
