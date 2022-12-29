@@ -24,8 +24,7 @@ ThemeData _darkTheme = ThemeData(
 );
 
 class HomePageState extends State<HomePage> {
-  var sayi1 = 0, sayi2 = 0, sonuc = 0;
-  double dsayi1 = 0, dsayi2 = 0, dsonuc = 0;
+  num sayi1 = 0, sayi2 = 0, sonuc = 0;
 
   final TextEditingController t1 = new TextEditingController();
   final TextEditingController t2 = new TextEditingController();
@@ -56,9 +55,9 @@ class HomePageState extends State<HomePage> {
 
   void Bol() {
     setState(() {
-      dsayi1 = double.parse(t1.text);
-      dsayi2 = double.parse(t2.text);
-      dsonuc = dsayi1 / dsayi2;
+      sayi1 = double.parse(t1.text);
+      sayi2 = double.parse(t2.text);
+      sonuc = sayi1 / sayi2;
     });
   }
 
@@ -67,7 +66,7 @@ class HomePageState extends State<HomePage> {
       t1.text = "";
       t2.text = "";
       sonuc = 0;
-      dsonuc = 0;
+      sonuc = 0;
     });
   }
 
@@ -78,7 +77,7 @@ class HomePageState extends State<HomePage> {
       theme: _iconBool ? _darkTheme : _lightTheme,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Hesap Mainesi"),
+          title: const Text("Hesap Makinesi"),
           actions: [
             IconButton(
               onPressed: () {
@@ -96,15 +95,7 @@ class HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               new Text(
-                "Sonuç1 : $dsonuc",
-                style: new TextStyle(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.red,
-                ),
-              ),
-              new Text(
-                "Sonuç2 : $sonuc",
+                "Sonuç : $sonuc",
                 style: new TextStyle(
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,

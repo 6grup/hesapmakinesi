@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Calculator App",
+      title: "Hesap Makinesi Uygulaması",
       theme: new ThemeData(primarySwatch: Colors.red),
       home: new HomePage(),
     );
